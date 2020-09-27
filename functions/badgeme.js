@@ -30,12 +30,12 @@ function fetch(url) {
 exports.handler = async (event) => {
     console.log(event);
     console.log(event.headers.referer || event.headers.Referer);
-    const badges = await Promise.all([fetch("http://img.shields.io/badge/style-for--the--badge-green?logo=appveyor&style=for-the-badge"), fetch("http://img.shields.io/badge/style-for--the--badge-green?logo=appveyor&style=for-the-badge")]);
+    const badges = await Promise.all([fetch("http://img.shields.io/badge/style-for--the--badge-green?logo=travis&style=for-the-badge"), fetch("http://img.shields.io/badge/style-for--the--badge-green?logo=circleci&style=for-the-badge")]);
     return {
         statusCode: 200,
         headers: {
             "Content-Type": "image/svg+xml; charset=UTF-8"
         },
-        body: `<svg>${badges.join("\n")}</svg>`,
+        body: `<svg xmlns="http://www.w3.org/2000/svg">${badges.join("")}</svg>`,
     }
 };
