@@ -29,7 +29,8 @@ function fetch(url) {
 
 module.exports = async (req, res) => {
     res.setHeader("Content-Type", "image/svg+xml");
-    console.log(req.headers.referer || req.headers.Referer);
+    console.log(req.headers.referer);
+    console.log(req.headers.Referer);
     const badges = await Promise.all([fetch("http://img.shields.io/badge/style-for--the--badge-green?logo=appveyor&style=for-the-badge")]);
     return res.send(badges.join(" "));
 };
