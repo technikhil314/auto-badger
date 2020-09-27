@@ -34,7 +34,7 @@ exports.handler = async (event) => {
     return {
         statusCode: 200,
         headers: {
-            "Content-Type": "image/svg+xml"
+            "Content-Type": "image/svg+xml; charset=UTF-8"
         },
         body: `<svg>${badges.join("\n")}</svg>`,
     }
