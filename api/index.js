@@ -1,3 +1,4 @@
 module.exports = async (req, res) => {
-    return res.send(`Hello world`);
+    res.setHeader("Content-Type", "text/html");
+    return res.send(`<h1>Hello world</h1>`);
 };
