@@ -1,1 +1,1 @@
-![whaterver placeholder](https://auto-badger-drju2e4uv.vercel.app/api)
+![whaterver placeholder](https://auto-badger-seven.vercel.app/api)
