@@ -30,7 +30,7 @@ function fetch(url) {
 exports.handler = async (event) => {
     console.log(event);
     console.log(event.headers.referer || event.headers.Referer);
-    const badges = await Promise.all([fetch("http://img.shields.io/badge/style-for--the--badge-green?logo=appveyor&style=for-the-badge")]);
+    const badges = await Promise.all([fetch("http://img.shields.io/badge/style-for--the--badge-green?logo=appveyor&style=for-the-badge"), fetch("http://img.shields.io/badge/style-for--the--badge-green?logo=appveyor&style=for-the-badge")]);
     return {
         statusCode: 200,
         headers: {
