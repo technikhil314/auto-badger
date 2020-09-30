@@ -24,9 +24,6 @@ A npm cli tool that reads your packagejson and git config and connects your read
 
 
 
-
-
-
 ## How to use
 
 ```

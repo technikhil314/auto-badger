@@ -8,8 +8,7 @@ async function index() {
 }
 
 async function cli() {
-    const readmePath = path.resolve(process.cwd(), 'readme.md');
-    const argv = require('minimist')(process.argv.slice(2));
+    const readmePath = path.resolve(process.cwd(), 'README.md');
     const readmeBuffer = await fs.readFile(readmePath);
     const readmeContent = readmeBuffer.toString();
     const startPlaceholderIndex = readmeContent.indexOf(startPlaceholder);
@@ -60,7 +59,7 @@ async function cli() {
             forkBadge
         ].filter(Boolean).join("\n")
     ].join("\n\n");
-    console.log("Generated Badhes Are");
+    console.log("Generated Badges Are");
     console.log(allBadgesString);
     // Replace placeholder in readme.md
     await fs.copyFile(readmePath, "readme.md.bk");
