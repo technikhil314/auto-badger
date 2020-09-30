@@ -22,7 +22,8 @@ A npm cli tool that reads your packagejson and git config and connects your read
 
 [//]: <> (end placeholder for auto-badger)
 
-
+### See the demo running here 
+[![asciicast](https://asciinema.org/a/362652.svg)](https://asciinema.org/a/362652)
 
 ## How to use
 
