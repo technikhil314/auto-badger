@@ -41,6 +41,7 @@ async function cli() {
         forkBadge,
         licenseBadge
     ] = allBadges.flat(Infinity);
+    console.log("Generated Badhes Are");
     console.log(allBadges);
     const allBadgesString = [
         [
