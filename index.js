@@ -65,10 +65,10 @@ async function cli() {
     // Replace placeholder in readme.md
     await fs.copyFile(readmePath, "readme.md.bk");
     try {
-        await fs.truncae(readmePath, 0);
+        await fs.truncate(readmePath, 0);
         await fs.appendFile(readmePath, readmeContent.slice(0, startPlaceholderIndex + startPlaceholder.length + 1));
         await fs.appendFile(readmePath, "\n\n" + allBadgesString);
-        let contentToAppend
+        let contentToAppend;
         if (startPlaceholderIndex > -1 && endPlaceholderIndex > -1) {
             contentToAppend = readmeContent.slice(endPlaceholderIndex + endPlaceholder.length + 1, readmeContent.length);
         } else if (startPlaceholderIndex > -1) {
@@ -78,6 +78,8 @@ async function cli() {
         await fs.appendFile(readmePath, "\n\n" + endPlaceholder);
         await fs.appendFile(readmePath, "\n\n" + contentToAppend);
     } catch (err) {
+        console.err(err);
+        console.err("Sorry something is wrong you might want to report an issue.");
         await fs.copyFile("readme.md.bk", readmePath);
     } finally {
         await fs.unlink("readme.md.bk");
