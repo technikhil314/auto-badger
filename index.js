@@ -41,8 +41,6 @@ async function cli() {
         forkBadge,
         licenseBadge
     ] = allBadges.flat(Infinity);
-    console.log("Generated Badhes Are");
-    console.log(allBadges);
     const allBadgesString = [
         [
             buildBadge,
@@ -62,6 +60,8 @@ async function cli() {
             forkBadge
         ].filter(Boolean).join("\n")
     ].join("\n\n");
+    console.log("Generated Badhes Are");
+    console.log(allBadgesString);
     // Replace placeholder in readme.md
     await fs.copyFile(readmePath, "readme.md.bk");
     try {

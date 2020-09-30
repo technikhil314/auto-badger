@@ -10,7 +10,7 @@ exports.generate = async function () {
         case types.NPM:
             let packagejson = await readCacheFile(path.resolve(process.cwd(), "package.json"));
             packagejson = JSON.parse(packagejson);
-            return `[![dependancies](https://img.shields.io/librariesio/release/npm/)](https://libraries.io/npm/${encodeURIComponent(packagejson.name)})`
+            return `[![dependancies](https://img.shields.io/librariesio/release/npm/${packagejson.name})](https://libraries.io/npm/${encodeURIComponent(packagejson.name)})`
         default:
             console.error("Could not find any dependancies related configuration. Skipping it...")
             return '';
