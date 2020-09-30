@@ -1,0 +1,12 @@
+module.exports = {
+    GITHUB: 'GITHUB',
+    NPM: 'NPM',
+    CODECOV: 'CODECOV',
+    COVERALLS: 'COVERALLS',
+    PYTHON: 'PYTHON',
+    PIP: 'PIP',
+    NODEJS: 'NODEJS',
+    TRAVIS: 'TRAVIS',
+    APPVEYOR: 'APPVEYOR',
+    GITLAB: 'GITLAB'
+}

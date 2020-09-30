@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git@github.com-personal:technikhil314/auto-badger.git"
+    "url": "https://github.com/technikhil314/auto-badger"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   },
   "bin": {
     "auto-badger": "bin/index.js"
@@ -17,6 +17,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vercel": "^20.1.1"
+    "eslint": "^7.10.0",
+    "minimist": "^1.2.5",
+    "nodegit": "^0.27.0"
   }
 }
