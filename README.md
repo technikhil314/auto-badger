@@ -13,14 +13,42 @@ A npm cli tool that reads your packagejson and git config and connects your read
 [![license](https://img.shields.io/npm/l/git-auto-badger)](https://github.com/technikhil314/auto-badger/blob/master/LICENSE)
 
 [![dependancies](https://img.shields.io/librariesio/release/npm/git-auto-badger)](https://libraries.io/npm/git-auto-badger)
-[![downloads](https://img.shields.io/npm/dm/git-auto-badger)](https://npmcharts.com/compare/git-auto-badger)
 [![all contributors](https://img.shields.io/github/all-contributors/technikhil314/auto-badger)](https://github.com/technikhil314/auto-badger/graphs/contributors)
 [![code of conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/technikhil314/auto-badger/blob/master/CODE_OF_CONDUCT.md)
 
 [![stargazers](https://img.shields.io/github/stars/technikhil314/auto-badger?style=social)](https://github.com/technikhil314/auto-badger/stargazers)
 [![number of forks](https://img.shields.io/github/forks/technikhil314/auto-badger?style=social)](https://github.com/technikhil314/auto-badger/fork)
+[![Follow twitterUserName on twiter](https://img.shields.io/twitter/follow/technikhil314?label=Follow)](https://www.twitter.com/technikhil314)
 
 [//]: <> (end placeholder for auto-badger)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### See the demo running here 
 [![asciicast](https://asciinema.org/a/362652.svg)](https://asciinema.org/a/362652)
@@ -48,9 +76,9 @@ This cli currently supports following providers from each category
     - Gitlab [Coming soon]
 1. CI/CD
     - Travis CI [:heavy_check_mark:]
-    - Github Actions [Coming soon]
-    - Appveyor [Coming soon]
-    - Circle CI [Coming soon]
+    - Github Actions (first Job) [:heavy_check_mark:]
+    - Appveyor [:heavy_check_mark:]
+    - Circle CI [:heavy_check_mark:]
 2. Coverage
     - Coveralls [:heavy_check_mark:]
     - CodeCov [Coming soon]
@@ -69,7 +97,7 @@ This cli currently supports following providers from each category
     - NPM Per month [:heavy_check_mark:]
 9. Social
     - Github (Repo Stars, Fork) [:heavy_check_mark:]
-    - twitter [Coming soon]
+    - twitter (Follow user/org) [:heavy_check_mark:]
 
 ### How it works?
 

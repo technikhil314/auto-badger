@@ -6,6 +6,7 @@ const downloads = require("./downloads");
 const coverage = require("./coverage");
 const github = require("./github");
 const license = require("./license");
+const twitter = require("./twitter");
 module.exports = {
     build,
     version,
@@ -14,5 +15,6 @@ module.exports = {
     downloads,
     coverage,
     github,
-    license
+    license,
+    twitter
 }

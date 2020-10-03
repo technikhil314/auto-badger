@@ -5,6 +5,7 @@ module.exports = {
     COVERALLS: 'COVERALLS',
     PYTHON: 'PYTHON',
     PIP: 'PIP',
+    CIRCLECI: 'CIRCLECI',
     NODEJS: 'NODEJS',
     TRAVIS: 'TRAVIS',
     APPVEYOR: 'APPVEYOR',

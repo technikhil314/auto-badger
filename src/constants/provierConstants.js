@@ -4,7 +4,7 @@ const ciProviders = {
     "./.gitlab-ci.yml": types.GITLAB,
     "./appveyor.yml": types.APPVEYOR,
     "./.travis.yml": types.TRAVIS,
-    "./.github/workdlows": types.GITHUB
+    "./.github/workflows/": types.GITHUB
 }
 
 const projectRTProviders = {

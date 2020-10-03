@@ -2,12 +2,30 @@
 const badges = require("./src/badges");
 const path = require('path');
 const fs = require('fs/promises');
+const minimist = require('minimist');
 const { startPlaceholder, endPlaceholder } = require("./src/constants/strings");
 async function index() {
 
 }
 
+
+function printHelp() {
+    console.log(`
+        auto-badger Utility - Adds all necessary badges to your projects readme.
+
+        [USAGE]
+        $ auto-badger [option=value]
+
+        [AVAILABLE OPTIONS ARE]
+        --twitter-username    Pass your twitter username for twitter badges
+        --help                Print this help
+    `);
+}
 async function cli() {
+    const cliArgs = minimist(process.argv.slice(2));
+    if (cliArgs.help) {
+        return printHelp();
+    }
     const readmePath = path.resolve(process.cwd(), 'README.md');
     const readmeBuffer = await fs.readFile(readmePath);
     const readmeContent = readmeBuffer.toString();
@@ -25,7 +43,8 @@ async function cli() {
         badges.downloads.generate(),
         badges.coverage.generate(),
         badges.github.generate(),
-        badges.license.generate()
+        badges.license.generate(),
+        badges.twitter.generate(cliArgs['twitter-username'])
     ]);
     [
         buildBadge,
@@ -38,7 +57,8 @@ async function cli() {
         codeOfConduct,
         starsBadge,
         forkBadge,
-        licenseBadge
+        licenseBadge,
+        twitterBadge
     ] = allBadges.flat(Infinity);
     const allBadgesString = [
         [
@@ -56,7 +76,8 @@ async function cli() {
         ].filter(Boolean).join("\n"),
         [
             starsBadge,
-            forkBadge
+            forkBadge,
+            twitterBadge
         ].filter(Boolean).join("\n")
     ].join("\n\n");
     console.log("Generated Badges Are");

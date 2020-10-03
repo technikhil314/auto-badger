@@ -7,9 +7,9 @@ const { readCacheFile } = require('../helpers/readCacheFile');
 const { detectRepoUrl } = require('../helpers/detectRepoUrl');
 const { parseRepoUrl } = require('../helpers/parseRepoUrl');
 exports.generate = async function () {
-    const [pmType, repoUrl] = await Promise.all([detectType(packageManagerProviders, "Package manager"), detectRepoUrl()]);
+    const [{ type }, repoUrl] = await Promise.all([detectType(packageManagerProviders, "Package manager"), detectRepoUrl()]);
     const { repoOwner, repoName } = parseRepoUrl(repoUrl);
-    switch (pmType) {
+    switch (type) {
         case types.NPM:
             let packagejson = await readCacheFile(path.resolve(process.cwd(), "package.json"));
             packagejson = JSON.parse(packagejson);
