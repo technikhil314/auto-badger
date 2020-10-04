@@ -17,8 +17,11 @@ function printHelp() {
         $ auto-badger [option=value]
 
         [AVAILABLE OPTIONS ARE]
-        --twitter-username    Pass your twitter username for twitter badges
-        --help                Print this help
+        --community-provider        Pass name of community provider viz. discord, spectrum, gitter
+        --community-name            Name of the community of specified community provider
+        --community-server-url      Url to the community server (this is required only in case of discord)
+        --twitter-username          Pass your twitter username for twitter badges
+        --help                      Print this help
     `);
 }
 async function cli() {
@@ -44,7 +47,12 @@ async function cli() {
         badges.coverage.generate(),
         badges.github.generate(),
         badges.license.generate(),
-        badges.twitter.generate(cliArgs['twitter-username'])
+        badges.twitter.generate(cliArgs['twitter-username']),
+        badges.community.generate({
+            communityProvider: cliArgs['community-provider'],
+            communityId: cliArgs['community-name'],
+            communityServerUrl: cliArgs['community-server-url']
+        })
     ]);
     [
         buildBadge,
@@ -58,7 +66,8 @@ async function cli() {
         starsBadge,
         forkBadge,
         licenseBadge,
-        twitterBadge
+        twitterBadge,
+        communityBadge
     ] = allBadges.flat(Infinity);
     const allBadgesString = [
         [
@@ -75,6 +84,7 @@ async function cli() {
             codeOfConduct
         ].filter(Boolean).join("\n"),
         [
+            communityBadge,
             starsBadge,
             forkBadge,
             twitterBadge
