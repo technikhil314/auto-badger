@@ -21,7 +21,7 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 
 ### See the demo running here
 
-[![asciicast](https://asciinema.org/a/362652.svg)](https://asciinema.org/a/362652)
+[![demo](https://raw.githubusercontent.com/technikhil314/my-static-assets/master/terminal-casts/auto-badger.svg)](https://raw.githubusercontent.com/technikhil314/my-static-assets/master/terminal-casts/auto-badger.svg)
 
 ## How to use
 
