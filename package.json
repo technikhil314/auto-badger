@@ -1,21 +1,28 @@
 {
   "name": "git-auto-badger",
   "version": "1.0.9",
-  "description": "",
+  "description": "A npm cli tool that reads your package.json/project metadata and git config and connects your readme with multiple badge providers (shields.io, badgen.net etc)",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/technikhil314/auto-badger"
   },
+  "homepage": "https://github.com/technikhil314/auto-badger",
   "engines": {
     "node": ">=10.0.0"
   },
   "bin": {
     "auto-badger": "bin/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "oss",
+    "shields.io",
+    "github",
+    "badges",
+    "status badges"
+  ],
+  "author": "Nikhil Mehta",
+  "license": "MIT",
   "dependencies": {
     "eslint": "^7.10.0",
     "minimist": "^1.2.5",

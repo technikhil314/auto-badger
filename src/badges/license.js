@@ -13,7 +13,7 @@ exports.generate = async function () {
         case types.NPM:
             let packagejson = await readCacheFile(path.resolve(process.cwd(), "package.json"));
             packagejson = JSON.parse(packagejson);
-            return `[![license](https://img.shields.io/npm/l/${packagejson.name})](https://github.com/${repoOwner}/${repoName}/blob/master/LICENSE)`
+            return `[![license](https://img.shields.io/npm/l/${packagejson.name}?color=%23007a1f)](https://github.com/${repoOwner}/${repoName}/blob/master/LICENSE)`
         default:
             console.error("Could not find any license related configuration. Skipping it...")
             return '';

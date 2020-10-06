@@ -10,11 +10,11 @@ exports.generate = async function ({ communityProvider, communityId, communitySe
     const community = communityProvider.toUpperCase();
     switch (community) {
         case types.DISCORD:
-            return `[![chat with community](https://img.shields.io//discord/${communityId})](${communityServerUrl})`;
+            return `[![chat with community](https://img.shields.io//discord/${communityId}?color=%23007a1f)](${communityServerUrl})`;
         case types.SPECTRUM:
             return `[![chat with community](https://img.shields.io/badge/Join%20us%20on-spectrum-orange)](https://spectrum.chat/${communityId})`
         case types.GITTER:
-            return `[![chat with community](https://img.shields.io/gitter/room/${repoOwner}/${repoName})](https://gitter.im/${communityId})`
+            return `[![chat with community](https://img.shields.io/gitter/room/${repoOwner}/${repoName}?color=%23007a1f)](https://gitter.im/${communityId})`
         default:
             console.error("Could not find any community related configuration. Skipping it...");
             return '';

@@ -1,8 +1,5 @@
-const types = require("../constants/types");
 const { detectRepoUrl } = require("../helpers/detectRepoUrl");
-const { detectType } = require("../helpers/detectType")
 const { parseRepoUrl } = require("../helpers/parseRepoUrl");
-const { coverageProviders } = require("../constants/provierConstants");
 exports.generate = async function () {
     const repoUrl = await detectRepoUrl();
     const { repoOwner, repoName } = parseRepoUrl(repoUrl);

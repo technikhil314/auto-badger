@@ -9,7 +9,7 @@ exports.generate = async function () {
     const { repoOwner, repoName } = parseRepoUrl(repoUrl);
     switch (type) {
         case types.TRAVIS:
-            return `[![Build Status](https://img.shields.io/travis/${repoOwner}/${repoName}.svg?style=flat-square)](https://travis-ci.org/${repoOwner}/${repoName})`
+            return `[![Build Status](https://img.shields.io/travis/${repoOwner}/${repoName}.svg?style=flat-square&color=%23007a1f)](https://travis-ci.org/${repoOwner}/${repoName})`
         case types.GITHUB:
             return `[![Build Status](https://github.com/${repoOwner}/${repoName}/workflows/${rest.jobName}/badge.svg?branch=master)](https://github.com/${repoOwner}/${repoName}/actions)`
         case types.APPVEYOR:

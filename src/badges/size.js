@@ -10,7 +10,10 @@ exports.generate = async function () {
         case types.NPM:
             let packagejson = await readCacheFile(path.resolve(process.cwd(), "package.json"));
             packagejson = JSON.parse(packagejson);
-            return `[![size](https://img.shields.io/bundlephobia/min/${packagejson.name})](https://bundlephobia.com/result?p=${packagejson.name})`
+            return [
+                `[![min size](https://img.shields.io/bundlephobia/min/${packagejson.name})](https://bundlephobia.com/result?p=${packagejson.name})`,
+                `[![mingzip size](https://img.shields.io/bundlephobia/minzip/${packagejson.name})](https://bundlephobia.com/result?p=${packagejson.name})`
+            ].join("\n")
         default:
             console.error("Could not find any size related configuration. Skipping it...")
             return '';
