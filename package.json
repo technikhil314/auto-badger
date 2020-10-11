@@ -1,6 +1,6 @@
 {
   "name": "git-auto-badger",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A npm cli tool that reads your package.json/project metadata and git config and connects your readme with multiple badge providers (shields.io, badgen.net etc)",
   "main": "index.js",
   "repository": {
