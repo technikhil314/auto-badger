@@ -1,15 +1,9 @@
-const nodegit = require('nodegit');
+const parse = require('parse-git-config');
 let url = null;
 const detectRepoUrl = async function () {
     if (url) {
         return url;
     }
-    url = await nodegit.Repository.open(".git")
-        .then(repo => repo.config())
-        .then(config => {
-            return config.getStringBuf("remote.origin.url")
-        })
-        .then(buf => buf.toString());
-    return url;
+    return parse.sync()['remote "origin"'].url;
 }
 exports.detectRepoUrl = detectRepoUrl;
