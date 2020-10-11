@@ -24,11 +24,8 @@
   "author": "Nikhil Mehta",
   "license": "MIT",
   "dependencies": {
-    "@iarna/toml": "^2.2.5",
     "eslint": "^7.10.0",
-    "i": "^0.3.6",
     "minimist": "^1.2.5",
-    "nodegit": "^0.27.0",
     "npm": "^6.14.8",
     "parse-git-config": "^3.0.0",
     "yaml": "^1.10.0"
