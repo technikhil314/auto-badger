@@ -11,7 +11,7 @@ exports.generate = async function () {
     const { repoOwner, repoName } = parseRepoUrl(repoUrl);
     switch (type) {
         case types.NPM:
-            let packagejson = await readCacheFile(path.resolve(process.cwd(), "package.json"));
+            let packagejson = await readCacheFile("package.json");
             packagejson = JSON.parse(packagejson);
             return `[![license](https://img.shields.io/npm/l/${packagejson.name}?color=%23007a1f)](https://github.com/${repoOwner}/${repoName}/blob/master/LICENSE)`
         default:

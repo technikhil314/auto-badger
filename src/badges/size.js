@@ -1,5 +1,3 @@
-const path = require('path');
-const fs = require('fs/promises');
 const types = require("../constants/types");
 const { detectType } = require("../helpers/detectType")
 const { packageManagerProviders } = require("../constants/provierConstants");
@@ -8,9 +6,9 @@ exports.generate = async function () {
     const { type } = await detectType(packageManagerProviders, "Package manager");
     switch (type) {
         case types.NPM:
-            let packagejson = await readCacheFile(path.resolve(process.cwd(), "package.json"));
+            let packagejson = await readCacheFile("package.json");
             packagejson = JSON.parse(packagejson);
-            if (Object.keys(packagejson.bin).length > 0) {
+            if (packagejson.bin && Object.keys(packagejson.bin).length > 0) {
                 return `[![package size](https://packagephobia.com/badge?p=${packagejson.name})](https://packagephobia.com/result?p=${packagejson.name})`
             }
             return [

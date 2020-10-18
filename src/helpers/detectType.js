@@ -1,3 +1,4 @@
+const findUp = require('find-up');
 const fs = require('fs/promises');
 const yaml = require('yaml');
 
@@ -12,13 +13,15 @@ const detectType = async function (typeMapping, detectionType) {
         try {
             let isTrue = false;
             if (prop.endsWith("/")) {
-                const files = await fs.readdir(prop);
-                const fileContent = await fs.readFile(prop + files[0]);
+                const path = await findUp(prop, { type: 'directory' });
+                const files = await fs.readdir(path);
+                const fileContent = await fs.readFile(path + files[0]);
                 const fileJson = yaml.parse(fileContent.toString());
                 extrasToReturn.jobName = fileJson.name;
                 isTrue = true;
             } else {
-                isTrue = await fs.stat(prop);
+                const path = await findUp(prop);
+                isTrue = await fs.stat(path);
             }
             if (isTrue) {
                 type = typeMapping[prop];

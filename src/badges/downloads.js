@@ -7,7 +7,7 @@ exports.generate = async function () {
     const { type } = await detectType(packageManagerProviders, "Package manager");
     switch (type) {
         case types.NPM:
-            let packagejson = await readCacheFile(path.resolve(process.cwd(), "package.json"));
+            let packagejson = await readCacheFile("package.json");
             packagejson = JSON.parse(packagejson);
             return `[![downloads](https://img.shields.io/npm/dm/${packagejson.name})](https://npmcharts.com/compare/${packagejson.name})`
         default:

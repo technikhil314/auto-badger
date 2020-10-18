@@ -25,6 +25,7 @@
   "license": "MIT",
   "dependencies": {
     "eslint": "^7.10.0",
+    "find-up": "^5.0.0",
     "minimist": "^1.2.5",
     "npm": "^6.14.8",
     "parse-git-config": "^3.0.0",
