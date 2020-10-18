@@ -9,13 +9,13 @@ const detectType = async function (typeMapping, detectionType) {
         return cache.get(detectionType);
     }
     let type = null;
+    let isTrue = false;
     for (let prop in typeMapping) {
         try {
-            let isTrue = false;
             if (prop.endsWith("/")) {
                 const path = await findUp(prop, { type: 'directory' });
                 const files = await fs.readdir(path);
-                const fileContent = await fs.readFile(path + files[0]);
+                const fileContent = await fs.readFile(path + "/" + files[0]);
                 const fileJson = yaml.parse(fileContent.toString());
                 extrasToReturn.jobName = fileJson.name;
                 isTrue = true;

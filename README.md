@@ -1,9 +1,10 @@
 # Git Auto badger
 
+### Add badges to your project in 2 seconds
+
 A npm cli tool that reads your packagejson/project metadata and git config and connects your readme with multiple badge providers (shields.io, badgen.net etc)
 
 [//]: <> (start placeholder for auto-badger)
-
 
 [![Build Status](https://img.shields.io/travis/technikhil314/auto-badger.svg?style=flat-square&color=%23007a1f)](https://travis-ci.org/technikhil314/auto-badger)
 [![version](https://img.shields.io/npm/v/git-auto-badger.svg?style=flat-square)](https://npmjs.org/git-auto-badger)
@@ -24,6 +25,20 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 
 [//]: <> (end placeholder for auto-badger)
 
+## Table of contents
+  * [Announcements](#announcements)
+  * [Prerequisites](#prerequisites)
+  * [Demo](#see-the-demo-running-here)
+  * [Usage](#how-to-use)
+    + [Install the cli](#install-the-cli)
+    + [Add placeholder to add badges](#add-placeholder-to-add-badges)
+    + [Run the cli](#run-the-cli)
+  * [What all things are supported](#what-all-things-are-supported)
+    + [How it works?](#how-it-works-)
+    + [Defaults](#defaults)
+  * [Facing problems](#facing-problems)
+  * [Contributions](#contributions)
+    + [How to contribute](#how-to-contribute)
 
 
 <br/>
@@ -49,7 +64,7 @@ Node >= 10.x.x
 
 Because why not? I did not find any such tool out there to minimise efforts of such a robotic job. Plus some of the default provided badges lack of accessibility constrint. White on green does not meet any contrast ratio. See the badge below for example it will be difficult for low vision people to read it
 
-![demo](https://img.shields.io/librariesio/release/npm/git-auto-badger?style=flat-square)
+[![Build Status](https://github.com/technikhil314/angular-components/workflows/build/badge.svg?branch=master)](https://github.com/technikhil314/angular-components/actions)
 
 <br/>
 
@@ -160,7 +175,7 @@ Also you can appreciate by
   </table>
 </p>
 
-# Issues/Problems
+# Facing Problems
 
 Please let me know if you are facing any issues [here](https://github.com/technikhil314/auto-badger/issues)
 
