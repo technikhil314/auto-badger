@@ -7,7 +7,7 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 [//]: <> (start placeholder for auto-badger)
 
 
-[![Build Status](https://img.shields.io/travis/technikhil314/auto-badger.svg?style=flat-square&color=%23007a1f)](https://travis-ci.org/technikhil314/auto-badger)
+[![Build Status](https://img.shields.io/github/workflow/status/technikhil314/auto-badger/publish?style=flat-square&color=%23007a1f)](https://github.com/technikhil314/auto-badger/actions)
 [![version](https://img.shields.io/npm/v/git-auto-badger.svg?style=flat-square)](https://npmjs.org/git-auto-badger)
 [![package size](https://packagephobia.com/badge?p=git-auto-badger)](https://packagephobia.com/result?p=git-auto-badger)
 [![license](https://img.shields.io/npm/l/git-auto-badger?color=%23007a1f)](https://github.com/technikhil314/auto-badger/blob/master/LICENSE)
@@ -20,11 +20,18 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 
 [![stargazers](https://img.shields.io/github/stars/technikhil314/auto-badger?style=social)](https://github.com/technikhil314/auto-badger/stargazers)
 [![number of forks](https://img.shields.io/github/forks/technikhil314/auto-badger?style=social)](https://github.com/technikhil314/auto-badger/fork)
-[![Follow technikhil314 on twiter](https://img.shields.io/twitter/follow/technikhil314?label=Follow)](https://www.twitter.com/technikhil314)
+[![Follow technikhil314 on twitter](https://img.shields.io/twitter/follow/technikhil314?label=Follow)](https://www.twitter.com/technikhil314)
 
 :clap: & :heart: to [auto badger](https://github.com/technikhil314/auto-badger) for making badging simple
 
 [//]: <> (end placeholder for auto-badger)
+
+
+
+
+
+
+
 
 ## Table of contents
   * [Announcements](#announcements)
