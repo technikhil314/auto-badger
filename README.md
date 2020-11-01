@@ -6,7 +6,6 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 
 [//]: <> (start placeholder for auto-badger)
 
-
 [![Build Status](https://img.shields.io/github/workflow/status/technikhil314/auto-badger/publish?style=flat-square&color=%23007a1f)](https://github.com/technikhil314/auto-badger/actions)
 [![version](https://img.shields.io/npm/v/git-auto-badger.svg?style=flat-square)](https://npmjs.org/git-auto-badger)
 [![package size](https://packagephobia.com/badge?p=git-auto-badger)](https://packagephobia.com/result?p=git-auto-badger)
@@ -26,27 +25,29 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 
 [//]: <> (end placeholder for auto-badger)
 
-
 ## Table of contents
-  * [Announcements](#announcements)
-  * [Prerequisites](#prerequisites)
-  * [Demo](#see-the-demo-running-here)
-  * [Usage](#how-to-use)
-    + [Install the cli](#install-the-cli)
-    + [Add placeholder to add badges](#add-placeholder-to-add-badges)
-    + [Run the cli](#run-the-cli)
-  * [What all things are supported](#what-all-things-are-supported)
-    + [How it works?](#how-it-works-)
-    + [Defaults](#defaults)
-  * [Facing problems](#facing-problems)
-  * [Contributions](#contributions)
-    + [How to contribute](#how-to-contribute)
 
+- [Announcements](#announcements)
+- [Prerequisites](#prerequisites)
+- [Demo](#see-the-demo-running-here)
+- [Usage](#how-to-use)
+  - [Install the cli](#install-the-cli)
+  - [Add placeholder to add badges](#add-placeholder-to-add-badges)
+  - [Run the cli](#run-the-cli)
+- [What all things are supported](#what-all-things-are-supported)
+  - [How it works?](#how-it-works-)
+  - [Defaults](#defaults)
+- [Facing problems](#facing-problems)
+- [Contributions](#contributions)
+  - [How to contribute](#how-to-contribute)
 
 <br/>
 
 ## Announcements
 
+- 01 Nov 2020
+  1.  Using meow and update notifier
+  2.  Removing accidentally added npm package. A total blunder :(
 - 18 Oct 2020
   1.  Using find-up to search files. Now you can use this with monorepos too.
 
