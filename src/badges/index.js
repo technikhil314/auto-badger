@@ -9,14 +9,14 @@ const license = require("./license");
 const twitter = require("./twitter");
 const community = require("./community");
 module.exports = {
-    build,
-    version,
-    dependancies,
-    size,
-    downloads,
-    coverage,
-    github,
-    license,
-    twitter,
-    community
-}
+  build,
+  version,
+  dependancies,
+  size,
+  downloads,
+  coverage,
+  github,
+  license,
+  twitter,
+  community,
+};

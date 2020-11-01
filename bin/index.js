@@ -1,10 +1,11 @@
 #! /usr/bin/env node
 
-'use strict';
-const meow = require('meow');
-const autoBadger = require("../index.js")
+"use strict";
+const meow = require("meow");
+const autoBadger = require("../index.js");
 
-const cli = meow(`
+const cli = meow(
+  `
     Usage
       $ auto-badger [Options]
  
@@ -18,7 +19,8 @@ const cli = meow(`
  
     Examples
       $ auto-badger -p ./README.md
-`, {
-});
+`,
+  {}
+);
 
 autoBadger(cli.input[0], cli.flags);
