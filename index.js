@@ -6,6 +6,10 @@ const fsPromises = require("fs/promises");
 const fs = require("fs");
 const chalk = require("chalk");
 const { startPlaceholder, endPlaceholder } = require("./src/constants/strings");
+const updateNotifier = require("update-notifier");
+const pkg = require("./package.json");
+
+updateNotifier({ pkg }).notify();
 async function autoBadger(input, cliArgs) {
   if (!fs.existsSync("README.md")) {
     console.error(chalk.red.bgYellow("README.md not found. Aborting..."));
