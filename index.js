@@ -1,41 +1,17 @@
 #! /usr/bin/env node
+
 const badges = require("./src/badges");
 const path = require('path');
 const fs = require('fs/promises');
-const minimist = require('minimist');
 const { startPlaceholder, endPlaceholder } = require("./src/constants/strings");
-async function index() {
-
-}
-
-
-function printHelp() {
-    console.log(`
-        auto-badger Utility - Adds all necessary badges to your projects readme.
-
-        [USAGE]
-        $ auto-badger [option=value]
-
-        [AVAILABLE OPTIONS ARE]
-        --community-provider        Pass name of community provider viz. discord, spectrum, gitter
-        --community-name            Name of the community of specified community provider
-        --community-server-url      Url to the community server (this is required only in case of discord)
-        --twitter-username          Pass your twitter username for twitter badges
-        --help                      Print this help
-    `);
-}
-async function cli() {
-    const cliArgs = minimist(process.argv.slice(2));
-    if (cliArgs.help) {
-        return printHelp();
-    }
+async function autoBadger(input, cliArgs) {
     const readmePath = path.resolve(process.cwd(), 'README.md');
     const readmeBuffer = await fs.readFile(readmePath);
     const readmeContent = readmeBuffer.toString();
     const startPlaceholderIndex = readmeContent.indexOf(startPlaceholder);
     const endPlaceholderIndex = readmeContent.indexOf(endPlaceholder);
     if (startPlaceholderIndex === -1) {
-        console.error("No placeholder found in readme");
+        console.error("No placeholder found in markdown");
         return;
     }
     let allBadges = await Promise.all([
@@ -47,11 +23,11 @@ async function cli() {
         badges.coverage.generate(),
         badges.github.generate(),
         badges.license.generate(),
-        badges.twitter.generate(cliArgs['twitter-username']),
+        badges.twitter.generate(cliArgs.twitterUsername),
         badges.community.generate({
-            communityProvider: cliArgs['community-provider'],
-            communityId: cliArgs['community-name'],
-            communityServerUrl: cliArgs['community-server-url']
+            communityProvider: cliArgs.communityProvider,
+            communityId: cliArgs.communityName,
+            communityServerUrl: cliArgs.communityServerUrl
         })
     ]);
     [
@@ -117,6 +93,4 @@ async function cli() {
 }
 
 
-// TODO: Take twitter username, github Username, pm username
-// as cli arg as they can be different from repoOwner
-cli();
+module.exports = autoBadger;
