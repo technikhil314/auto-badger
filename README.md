@@ -27,12 +27,6 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 [//]: <> (end placeholder for auto-badger)
 
 
-
-
-
-
-
-
 ## Table of contents
   * [Announcements](#announcements)
   * [Prerequisites](#prerequisites)
