@@ -1,7 +1,7 @@
 {
   "name": "git-auto-badger",
   "version": "1.0.14",
-  "description": "Add badges to your project in 2 seconds",
+  "description": "Add badges to your project/markdown in 2 seconds",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -19,7 +19,21 @@
     "shields.io",
     "github",
     "badges",
-    "status badges"
+    "status badges",
+    "cli",
+    "bin",
+    "util",
+    "utility",
+    "helper",
+    "argv",
+    "command",
+    "line",
+    "parser",
+    "option",
+    "flags",
+    "input",
+    "cmd",
+    "console"
   ],
   "author": "Nikhil Mehta",
   "license": "MIT",
