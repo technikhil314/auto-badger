@@ -74,10 +74,13 @@ async function autoBadger(input, cliArgs) {
   ].join("\n\n");
   console.log(chalk.blue("Generated Badges Are"));
   console.log(chalk.blue(allBadgesString));
-  // Replace placeholder in readme.md
+  // backup readme
   await fsPromises.copyFile(readmePath, "readme.md.bk");
   try {
+    // truncate the existing readme
     await fsPromises.truncate(readmePath, 0);
+    // copy content from start to start placeholder to the truncated file
+    // along with start placeholder
     await fsPromises.appendFile(
       readmePath,
       readmeContent.slice(
@@ -85,25 +88,34 @@ async function autoBadger(input, cliArgs) {
         startPlaceholderIndex + startPlaceholder.length + 1
       )
     );
+    // append all generated badges
     await fsPromises.appendFile(readmePath, "\n\n" + allBadgesString);
     let contentToAppend;
+    // if both start and end placeholder are present in the file
+    // this means user already used auto-badger on this file
+    // we now need to be more careful
     if (startPlaceholderIndex > -1 && endPlaceholderIndex > -1) {
+      // content from end of end placeholder to end of file
       contentToAppend = readmeContent.slice(
         endPlaceholderIndex + endPlaceholder.length + 1,
         readmeContent.length
       );
     } else if (startPlaceholderIndex > -1) {
+      // content from end of start placeholder to end of file
       contentToAppend = readmeContent.slice(
         startPlaceholderIndex + startPlaceholder.length + 1,
         readmeContent.length
       );
     }
+    // add promotional content and end of badges
     await fsPromises.appendFile(
       readmePath,
       "\n\n" +
         `:clap: & :heart: to [auto badger](https://github.com/technikhil314/auto-badger) for making badging simple`
     );
+    // add end placeholder
     await fsPromises.appendFile(readmePath, "\n\n" + endPlaceholder);
+    // append the remaining content
     await fsPromises.appendFile(readmePath, "\n\n" + contentToAppend);
   } catch (err) {
     console.err(err);
