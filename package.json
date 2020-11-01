@@ -39,6 +39,7 @@
   "license": "MIT",
   "dependencies": {
     "eslint": "^7.10.0",
+    "chalk": "^4.1.0",
     "find-up": "^5.0.0",
     "meow": "^8.0.0",
     "npm": "^6.14.8",

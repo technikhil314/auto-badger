@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs/promises');
 const types = require("../constants/types");
+const chalk = require('chalk');
 const { detectType } = require("../helpers/detectType")
 const { packageManagerProviders } = require("../constants/provierConstants");
 const { readCacheFile } = require('../helpers/readCacheFile');
@@ -15,7 +16,7 @@ exports.generate = async function () {
             packagejson = JSON.parse(packagejson);
             return `[![license](https://img.shields.io/npm/l/${packagejson.name}?color=%23007a1f)](https://github.com/${repoOwner}/${repoName}/blob/master/LICENSE)`
         default:
-            console.error("Could not find any license related configuration. Skipping it...")
+            console.warn(chalk.yellow("Could not find any license related configuration. Skipping it..."))
             return '';
     }
 }

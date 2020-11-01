@@ -3,7 +3,7 @@ const { detectRepoUrl } = require("../helpers/detectRepoUrl");
 const { detectType } = require("../helpers/detectType")
 const { parseRepoUrl } = require("../helpers/parseRepoUrl");
 const { ciProviders } = require("../constants/provierConstants");
-
+const chalk = require('chalk');
 exports.generate = async function () {
     const [{ type, ...rest }, repoUrl] = await Promise.all([detectType(ciProviders, "CI"), detectRepoUrl()]);
     const { repoOwner, repoName } = parseRepoUrl(repoUrl);
@@ -17,7 +17,7 @@ exports.generate = async function () {
         case types.CIRCLECI:
             return `[![Build Status](https://circleci.com/gh/${repoOwner}/${repoName}.svg?style=svg)](https://circleci.com/gh/${repoOwner}/${repoName})`
         default:
-            console.error("Could not find any CI related configuration. Skipping it...")
+            console.warn(chalk.yellow("Could not find any CI related configuration. Skipping it..."));
             return '';
     }
 }

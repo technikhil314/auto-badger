@@ -1,6 +1,7 @@
 const types = require("../constants/types");
 const { detectRepoUrl } = require("../helpers/detectRepoUrl");
 const { parseRepoUrl } = require("../helpers/parseRepoUrl");
+const chalk = require('chalk');
 exports.generate = async function ({ communityProvider, communityId, communityServerUrl }) {
     if (!communityProvider) {
         return ``;
@@ -16,7 +17,7 @@ exports.generate = async function ({ communityProvider, communityId, communitySe
         case types.GITTER:
             return `[![chat with community](https://img.shields.io/gitter/room/${repoOwner}/${repoName}?color=%23007a1f)](https://gitter.im/${communityId})`
         default:
-            console.error("Could not find any community related configuration. Skipping it...");
+            console.warn(chalk.yellow("Could not find any community related configuration. Skipping it..."));
             return '';
     }
 }

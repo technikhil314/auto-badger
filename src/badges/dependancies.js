@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs/promises');
+const chalk = require('chalk');
 const types = require("../constants/types");
 const { detectType } = require("../helpers/detectType")
 const { packageManagerProviders } = require("../constants/provierConstants");
@@ -12,7 +13,7 @@ exports.generate = async function () {
             packagejson = JSON.parse(packagejson);
             return `[![dependancies](https://img.shields.io/librariesio/release/npm/${packagejson.name}?color=%23007a1f)](https://libraries.io/npm/${encodeURIComponent(packagejson.name)})`
         default:
-            console.error("Could not find any dependancies related configuration. Skipping it...")
+            console.warn(chalk.yellow("Could not find any dependancies related configuration. Skipping it..."))
             return '';
     }
 }

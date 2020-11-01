@@ -3,7 +3,7 @@ const types = require("../constants/types");
 const { detectType } = require("../helpers/detectType")
 const { packageManagerProviders } = require("../constants/provierConstants");
 const { readCacheFile } = require('../helpers/readCacheFile');
-
+const chalk = require('chalk');
 exports.generate = async function () {
     const { type } = await detectType(packageManagerProviders, "Package manager");
     switch (type) {
@@ -12,7 +12,7 @@ exports.generate = async function () {
             packagejson = JSON.parse(packagejson);
             return `[![version](https://img.shields.io/npm/v/${packagejson.name}.svg?style=flat-square)](https://npmjs.org/${packagejson.name})`
         default:
-            console.error("Could not find any version related configuration. Skipping it...")
+            console.warn(chalk.yellow("Could not find any version related configuration. Skipping it..."))
             return '';
     }
 }
