@@ -72,8 +72,8 @@ async function autoBadger(input, cliArgs) {
       .join("\n"),
     [starsBadge, forkBadge, twitterBadge].filter(Boolean).join("\n"),
   ].join("\n\n");
-  console.log("Generated Badges Are");
-  console.log(allBadgesString);
+  console.log(chalk.blue("Generated Badges Are"));
+  console.log(chalk.blue(allBadgesString));
   // Replace placeholder in readme.md
   await fsPromises.copyFile(readmePath, "readme.md.bk");
   try {
