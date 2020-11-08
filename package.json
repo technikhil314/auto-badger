@@ -1,6 +1,6 @@
 {
   "name": "git-auto-badger",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Add badges to your project markdown in 2 seconds",
   "main": "index.js",
   "repository": {
