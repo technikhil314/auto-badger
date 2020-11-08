@@ -44,7 +44,8 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 <br/>
 
 ## Announcements
-
+- 08 Nov 2020
+   1. Added -p option for passing custom path to your markdown
 - 01 Nov 2020
   1.  Using meow and update notifier
   2.  Removing accidentally added npm package. A total blunder :(
