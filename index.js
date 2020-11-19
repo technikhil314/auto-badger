@@ -113,7 +113,7 @@ async function autoBadger(input, cliArgs) {
     await fsPromises.appendFile(
       markDownPath,
       "\n\n" +
-        `:clap: & :heart: to [auto badger](https://github.com/technikhil314/auto-badger) for making badging simple`
+        `###### :clap: & :heart: to [auto badger](https://github.com/technikhil314/auto-badger) for making badging simple</small>`
     );
     // add end placeholder
     await fsPromises.appendFile(markDownPath, "\n\n" + endPlaceholder);
