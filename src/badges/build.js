@@ -14,7 +14,9 @@ exports.generate = async function () {
     case types.TRAVIS:
       return `[![Build Status](https://img.shields.io/travis/${repoOwner}/${repoName}.svg?style=flat-square&color=%23007a1f)](https://travis-ci.org/${repoOwner}/${repoName})`;
     case types.GITHUB:
-      return `[![Build Status](https://img.shields.io/github/workflow/status/${repoOwner}/${repoName}/${rest.jobName}?style=flat-square&color=%23007a1f)](https://github.com/${repoOwner}/${repoName}/actions)`;
+      return `[![Build Status](https://img.shields.io/github/workflow/status/${repoOwner}/${repoName}/${encodeURIComponent(
+        rest.jobName
+      )}?style=flat-square&color=%23007a1f)](https://github.com/${repoOwner}/${repoName}/actions)`;
     case types.APPVEYOR:
       return `[![Build Status](https://img.shields.io/appveyor/build/${repoOwner}/${repoName}?style=flat-square&color=%23007a1f)](https://ci.appveyor.com/api/projects/status/github/${repoOwner}/${repoName})`;
     case types.CIRCLECI:
