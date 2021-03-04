@@ -1,6 +1,6 @@
-exports.generate = async function (twitterUserName) {
-  if (!twitterUserName) {
+exports.generate = async function ({ twitterUsername }) {
+  if (!twitterUsername) {
     return ``;
   }
-  return `[![Follow ${twitterUserName} on twitter](https://img.shields.io/twitter/follow/${twitterUserName}?label=Follow)](https://www.twitter.com/${twitterUserName})`;
+  return `[![Follow ${twitterUsername} on twitter](https://img.shields.io/twitter/follow/${twitterUsername}?label=Follow)](https://www.twitter.com/${twitterUsername})`;
 };

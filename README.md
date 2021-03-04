@@ -6,6 +6,7 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 
 [//]: <> (start placeholder for auto-badger)
 
+
 [![Build Status](https://img.shields.io/github/workflow/status/technikhil314/auto-badger/publish?style=flat-square&color=%23007a1f)](https://github.com/technikhil314/auto-badger/actions)
 [![version](https://img.shields.io/npm/v/git-auto-badger.svg?style=flat-square)](https://npmjs.org/git-auto-badger)
 [![package size](https://packagephobia.com/badge?p=git-auto-badger)](https://packagephobia.com/result?p=git-auto-badger)
@@ -15,37 +16,44 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 [![downloads](https://img.shields.io/npm/dm/git-auto-badger)](https://npmcharts.com/compare/git-auto-badger)
 [![all contributors](https://img.shields.io/github/all-contributors/technikhil314/auto-badger)](https://github.com/technikhil314/auto-badger/graphs/contributors)
 [![code of conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/technikhil314/auto-badger/blob/master/CODE_OF_CONDUCT.md)
-[![chat with community](https://img.shields.io/gitter/room/technikhil314/auto-badger?color=%23007a1f)](https://gitter.im/auto-badger)
+[![chat with community](https://img.shields.io/gitter/room/technikhil314/auto-badger?color=%23007a1f)](https://gitter.im/undefined)
 
 [![stargazers](https://img.shields.io/github/stars/technikhil314/auto-badger?style=social)](https://github.com/technikhil314/auto-badger/stargazers)
 [![number of forks](https://img.shields.io/github/forks/technikhil314/auto-badger?style=social)](https://github.com/technikhil314/auto-badger/fork)
 [![Follow technikhil314 on twitter](https://img.shields.io/twitter/follow/technikhil314?label=Follow)](https://www.twitter.com/technikhil314)
 
-:clap: & :heart: to [auto badger](https://github.com/technikhil314/auto-badger) for making badging simple
+###### :clap: & :heart: to [auto badger](https://github.com/technikhil314/auto-badger) for making badging simple
 
 [//]: <> (end placeholder for auto-badger)
 
 ## Table of contents
 
-- [Announcements](#announcements)
-- [Prerequisites](#prerequisites)
-- [Demo](#see-the-demo-running-here)
-- [Usage](#how-to-use)
-  - [Install the cli](#install-the-cli)
-  - [Add placeholder to add badges](#add-placeholder-to-add-badges)
-  - [Run the cli](#run-the-cli)
-- [What all things are supported](#what-all-things-are-supported)
-  - [How it works?](#how-it-works-)
-  - [Defaults](#defaults)
-- [Facing problems](#facing-problems)
+- [Git Auto badger](#git-auto-badger)
+    - [Add badges to your project in 2 seconds](#add-badges-to-your-project-in-2-seconds)
+          - [:clap: & :heart: to auto badger for making badging simple](#clap--heart-to-auto-badger-for-making-badging-simple)
+  - [Table of contents](#table-of-contents)
+  - [Announcements](#announcements)
+  - [Prerequisites](#prerequisites)
+  - [See the demo running here](#see-the-demo-running-here)
+  - [Why](#why)
+  - [How to use](#how-to-use)
+    - [Install the cli](#install-the-cli)
+    - [Add placeholder to add badges](#add-placeholder-to-add-badges)
+    - [Run the cli](#run-the-cli)
+  - [What all things are supported](#what-all-things-are-supported)
+    - [How it works?](#how-it-works)
+    - [Defaults](#defaults)
+  - [If you liked my work, show some :heart: :star: the repo.](#if-you-liked-my-work-show-some-heart-star-the-repo)
+- [Facing Problems](#facing-problems)
 - [Contributions](#contributions)
-  - [How to contribute](#how-to-contribute)
+    - [How to contribute](#how-to-contribute)
 
 <br/>
 
 ## Announcements
+
 - 08 Nov 2020
-   1. Added -p option for passing custom path to your markdown
+  1.  Added -p option for passing custom path to your markdown
 - 01 Nov 2020
   1.  Using meow and update notifier
   2.  Removing accidentally added npm package. A total blunder :(

@@ -1,4 +1,4 @@
-const types = require("../constants/types");
+const { providerTypes } = require("../constants/types");
 const { detectRepoUrl } = require("../helpers/detectRepoUrl");
 const { parseRepoUrl } = require("../helpers/parseRepoUrl");
 const chalk = require("chalk");
@@ -14,11 +14,11 @@ exports.generate = async function ({
   const { repoOwner, repoName } = parseRepoUrl(repoUrl);
   const community = communityProvider.toUpperCase();
   switch (community) {
-    case types.DISCORD:
+    case providerTypes.DISCORD:
       return `[![chat with community](https://img.shields.io//discord/${communityId}?color=%23007a1f)](${communityServerUrl})`;
-    case types.SPECTRUM:
+    case providerTypes.SPECTRUM:
       return `[![chat with community](https://img.shields.io/badge/Join%20us%20on-spectrum-orange)](https://spectrum.chat/${communityId})`;
-    case types.GITTER:
+    case providerTypes.GITTER:
       return `[![chat with community](https://img.shields.io/gitter/room/${repoOwner}/${repoName}?color=%23007a1f)](https://gitter.im/${communityId})`;
     default:
       console.warn(

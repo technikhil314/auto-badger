@@ -1,25 +1,25 @@
-const types = require("./types");
+const { providerTypes } = require("./types");
 
 const ciProviders = {
-  ".gitlab-ci.yml": types.GITLAB,
-  "appveyor.yml": types.APPVEYOR,
-  ".travis.yml": types.TRAVIS,
-  ".github/workflows/": types.GITHUB,
+  ".gitlab-ci.yml": providerTypes.GITLAB,
+  "appveyor.yml": providerTypes.APPVEYOR,
+  ".travis.yml": providerTypes.TRAVIS,
+  ".github/workflows/": providerTypes.GITHUB,
 };
 
 const projectRTProviders = {
-  "package.json": types.NODEJS,
-  "requirements.txt": types.PYTHON,
+  "package.json": providerTypes.NODEJS,
+  "requirements.txt": providerTypes.PYTHON,
 };
 
 const coverageProviders = {
-  ".coveralls.yml": types.COVERALLS,
-  "codecov.yml": types.CODECOV,
+  ".coveralls.yml": providerTypes.COVERALLS,
+  "codecov.yml": providerTypes.CODECOV,
 };
 
 const packageManagerProviders = {
-  "package.json": types.NPM,
-  "requirements.txt": types.PIP,
+  "package.json": providerTypes.NPM,
+  "requirements.txt": providerTypes.PIP,
 };
 
 module.exports = {

@@ -1,12 +1,13 @@
-const types = require("../constants/types");
+const { providerTypes, badgeTypes } = require("../constants/types");
 const { detectType } = require("../helpers/detectType");
 const { packageManagerProviders } = require("../constants/provierConstants");
 const { readCacheFile } = require("../helpers/readCacheFile");
 const chalk = require("chalk");
-exports.generate = async function () {
+exports.generate = async function ({ exclude }) {
+  if (exclude.includes(badgeTypes.SIZE)) return "";
   const { type } = await detectType(packageManagerProviders, "Package manager");
   switch (type) {
-    case types.NPM: {
+    case providerTypes.NPM: {
       let packagejson = await readCacheFile("package.json");
       packagejson = JSON.parse(packagejson);
       if (packagejson.bin && Object.keys(packagejson.bin).length > 0) {

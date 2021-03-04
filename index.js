@@ -7,10 +7,8 @@ const chalk = require("chalk");
 const { startPlaceholder, endPlaceholder } = require("./src/constants/strings");
 const updateNotifier = require("update-notifier");
 const pkg = require("./package.json");
-
 updateNotifier({ pkg }).notify();
 async function autoBadger(input, cliArgs) {
-  console.log(cliArgs);
   const markDownPath = cliArgs.markdownPath || "./README.md";
   if (!fs.existsSync(markDownPath)) {
     console.error(
@@ -29,20 +27,16 @@ async function autoBadger(input, cliArgs) {
     return;
   }
   let allBadges = await Promise.all([
-    badges.build.generate(),
-    badges.version.generate(),
-    badges.dependancies.generate(),
-    badges.size.generate(),
-    badges.downloads.generate(),
-    badges.coverage.generate(),
-    badges.github.generate(),
-    badges.license.generate(),
-    badges.twitter.generate(cliArgs.twitterUsername),
-    badges.community.generate({
-      communityProvider: cliArgs.communityProvider,
-      communityId: cliArgs.communityName,
-      communityServerUrl: cliArgs.communityServerUrl,
-    }),
+    badges.build.generate(cliArgs),
+    badges.version.generate(cliArgs),
+    badges.dependancies.generate(cliArgs),
+    badges.size.generate(cliArgs),
+    badges.downloads.generate(cliArgs),
+    badges.coverage.generate(cliArgs),
+    badges.github.generate(cliArgs),
+    badges.license.generate(cliArgs),
+    badges.twitter.generate(cliArgs),
+    badges.community.generate(cliArgs),
   ]);
   const [
     buildBadge,
@@ -74,7 +68,7 @@ async function autoBadger(input, cliArgs) {
       .join("\n"),
     [starsBadge, forkBadge, twitterBadge].filter(Boolean).join("\n"),
   ].join("\n\n");
-  console.log(chalk.blue("Generated Badges Are"));
+  console.log(chalk.blue("Generated Badges Are\n"));
   console.log(chalk.blue(allBadgesString));
   // backup readme
   await fsPromises.copyFile(markDownPath, "readme.md.bk");
