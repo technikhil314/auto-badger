@@ -12,7 +12,7 @@ exports.generate = async function ({ exclude }) {
       packagejson = JSON.parse(packagejson);
       return `[![dependancies](https://img.shields.io/librariesio/release/npm/${
         packagejson.name
-      }?color=%23007a1f)](https://libraries.io/npm/${encodeURIComponent(
+      }?color=%23007a1f&style=flat-square)](https://libraries.io/npm/${encodeURIComponent(
         packagejson.name
       )})`;
     }

@@ -16,7 +16,7 @@ exports.generate = async function ({ exclude }) {
     case providerTypes.NPM: {
       let packagejson = await readCacheFile("package.json");
       packagejson = JSON.parse(packagejson);
-      return `[![license](https://img.shields.io/npm/l/${packagejson.name}?color=%23007a1f)](https://github.com/${repoOwner}/${repoName}/blob/master/LICENSE)`;
+      return `[![license](https://img.shields.io/npm/l/${packagejson.name}?color=%23007a1f&style=flat-square)](https://github.com/${repoOwner}/${repoName}/blob/master/LICENSE)`;
     }
     default: {
       console.warn(

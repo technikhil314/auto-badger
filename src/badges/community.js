@@ -15,11 +15,11 @@ exports.generate = async function ({
   const community = communityProvider.toUpperCase();
   switch (community) {
     case providerTypes.DISCORD:
-      return `[![chat with community](https://img.shields.io//discord/${communityId}?color=%23007a1f)](${communityServerUrl})`;
+      return `[![chat with community](https://img.shields.io//discord/${communityId}?color=%23007a1f&style=flat-square)](${communityServerUrl})`;
     case providerTypes.SPECTRUM:
-      return `[![chat with community](https://img.shields.io/badge/Join%20us%20on-spectrum-orange)](https://spectrum.chat/${communityId})`;
+      return `[![chat with community](https://img.shields.io/badge/Join%20us%20on-spectrum-orange?style=flat-square)](https://spectrum.chat/${communityId})`;
     case providerTypes.GITTER:
-      return `[![chat with community](https://img.shields.io/gitter/room/${repoOwner}/${repoName}?color=%23007a1f)](https://gitter.im/${communityId})`;
+      return `[![chat with community](https://img.shields.io/gitter/room/${repoOwner}/${repoName}?color=%23007a1f&style=flat-square)](https://gitter.im/${communityId})`;
     default:
       console.warn(
         chalk.yellow(

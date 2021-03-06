@@ -14,7 +14,7 @@ exports.generate = async function ({ exclude }) {
         return `[![package size](https://packagephobia.com/badge?p=${packagejson.name})](https://packagephobia.com/result?p=${packagejson.name})`;
       }
       return [
-        `[![min size](https://img.shields.io/bundlephobia/min/${packagejson.name})](https://bundlephobia.com/result?p=${packagejson.name})`,
+        `[![min size](https://img.shields.io/bundlephobia/min/${packagejson.name}?style=flat-square)](https://bundlephobia.com/result?p=${packagejson.name})`,
         `[![mingzip size](https://img.shields.io/bundlephobia/minzip/${packagejson.name})](https://bundlephobia.com/result?p=${packagejson.name})`,
       ].join("\n");
     }

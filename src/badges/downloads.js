@@ -10,7 +10,7 @@ exports.generate = async function ({ exclude }) {
     case providerTypes.NPM: {
       let packagejson = await readCacheFile("package.json");
       packagejson = JSON.parse(packagejson);
-      return `[![downloads](https://img.shields.io/npm/dm/${packagejson.name})](https://npmcharts.com/compare/${packagejson.name})`;
+      return `[![downloads](https://img.shields.io/npm/dm/${packagejson.name}?style=flat-square&color=%23007a1f)](https://npmcharts.com/compare/${packagejson.name})`;
     }
     default: {
       console.warn(
