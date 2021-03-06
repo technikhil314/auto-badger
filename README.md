@@ -6,7 +6,6 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 
 [//]: <> (start placeholder for auto-badger)
 
-
 [![Build Status](https://img.shields.io/github/workflow/status/technikhil314/auto-badger/publish?style=flat-square&color=%23007a1f)](https://github.com/technikhil314/auto-badger/actions)
 [![version](https://img.shields.io/npm/v/git-auto-badger.svg?style=flat-square)](https://npmjs.org/git-auto-badger)
 [![package size](https://packagephobia.com/badge?p=git-auto-badger)](https://packagephobia.com/result?p=git-auto-badger)
@@ -52,6 +51,8 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 
 ## Announcements
 
+- 06 Mar 2021
+  1. Added -e/--exclude option to opt out of some badges
 - 08 Nov 2020
   1.  Added -p option for passing custom path to your markdown
 - 01 Nov 2020
@@ -74,7 +75,7 @@ Node >= 10.x.x
 
 ## Why
 
-Because why not? I did not find any such tool out there to minimise efforts of such a robotic job. Plus some of the default provided badges lack of accessibility constrint. White on green does not meet any contrast ratio. See the badge below for example it will be difficult for low vision people to read it
+Copy pasting / creating badges on shields.io such a robotic job. Plus some of the default provided badges lack of accessibility constraint. White on green does not meet any contrast ratio. See the badge below for example it will be difficult for low vision people to read it
 
 [![Build Status](https://github.com/technikhil314/angular-components/workflows/build/badge.svg?branch=master)](https://github.com/technikhil314/angular-components/actions)
 
