@@ -37,7 +37,7 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
   - [Why](#why)
   - [How to use](#how-to-use)
     - [Install the cli](#install-the-cli)
-    - [Add placeholder to add badges](#add-placeholder-to-add-badges)
+    - [Add placeholder to your markdown](#add-placeholder-to-your-markdown)
     - [Run the cli](#run-the-cli)
   - [What all things are supported](#what-all-things-are-supported)
     - [How it works?](#how-it-works)
@@ -75,7 +75,8 @@ Node >= 10.x.x
 
 ## Why
 
-Copy pasting / creating badges on shields.io such a robotic job. Plus some of the default provided badges lack of accessibility constraint. White on green does not meet any contrast ratio. See the badge below for example it will be difficult for low vision people to read it
+1. Copy pasting / creating badges on [shields.io](https://shields.io/) such a robotic job. 
+2. Some of the default provided badges lacks of some of the accessibility constraint. White on green does not meet the required contrast ratio. See the badge below for example it will be difficult for low vision people to read it
 
 [![Build Status](https://github.com/technikhil314/angular-components/workflows/build/badge.svg?branch=master)](https://github.com/technikhil314/angular-components/actions)
 
@@ -93,7 +94,7 @@ or
 yarn add -g git-auto-badger
 ```
 
-### Add placeholder to add badges
+### Add placeholder to your markdown
 
 Add following markdown comment where you want the badges to appear
 
