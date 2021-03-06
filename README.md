@@ -9,13 +9,13 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 [![Build Status](https://img.shields.io/github/workflow/status/technikhil314/auto-badger/publish?style=flat-square&color=%23007a1f)](https://github.com/technikhil314/auto-badger/actions)
 [![version](https://img.shields.io/npm/v/git-auto-badger.svg?style=flat-square)](https://npmjs.org/git-auto-badger)
 [![package size](https://packagephobia.com/badge?p=git-auto-badger)](https://packagephobia.com/result?p=git-auto-badger)
-[![license](https://img.shields.io/npm/l/git-auto-badger?color=%23007a1f)](https://github.com/technikhil314/auto-badger/blob/master/LICENSE)
+[![license](https://img.shields.io/npm/l/git-auto-badger?color=%23007a1f&style=flat-square)](https://github.com/technikhil314/auto-badger/blob/master/LICENSE)
 
-[![dependancies](https://img.shields.io/librariesio/release/npm/git-auto-badger?color=%23007a1f)](https://libraries.io/npm/git-auto-badger)
-[![downloads](https://img.shields.io/npm/dm/git-auto-badger)](https://npmcharts.com/compare/git-auto-badger)
-[![all contributors](https://img.shields.io/github/all-contributors/technikhil314/auto-badger)](https://github.com/technikhil314/auto-badger/graphs/contributors)
+[![dependancies](https://img.shields.io/librariesio/release/npm/git-auto-badger?color=%23007a1f&style=flat-square)](https://libraries.io/npm/git-auto-badger)
+[![downloads](https://img.shields.io/npm/dm/git-auto-badger?style=flat-square&color=%23007a1f)](https://npmcharts.com/compare/git-auto-badger)
+[![all contributors](https://img.shields.io/github/all-contributors/technikhil314/auto-badger?style=flat-square)](https://github.com/technikhil314/auto-badger/graphs/contributors)
 [![code of conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/technikhil314/auto-badger/blob/master/CODE_OF_CONDUCT.md)
-[![chat with community](https://img.shields.io/gitter/room/technikhil314/auto-badger?color=%23007a1f)](https://gitter.im/undefined)
+[![chat with community](https://img.shields.io/gitter/room/technikhil314/auto-badger?color=%23007a1f&style=flat-square)](https://gitter.im/auto-badger)
 
 [![stargazers](https://img.shields.io/github/stars/technikhil314/auto-badger?style=social)](https://github.com/technikhil314/auto-badger/stargazers)
 [![number of forks](https://img.shields.io/github/forks/technikhil314/auto-badger?style=social)](https://github.com/technikhil314/auto-badger/fork)
