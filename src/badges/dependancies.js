@@ -10,7 +10,7 @@ exports.generate = async function ({ exclude }) {
     case providerTypes.NPM: {
       let packagejson = await readCacheFile("package.json");
       packagejson = JSON.parse(packagejson);
-      return `[![dependancies](https://img.shields.io/librariesio/release/npm/${
+      return `[![dependencies](https://img.shields.io/librariesio/release/npm/${
         packagejson.name
       }?color=%23007a1f&style=flat-square)](https://libraries.io/npm/${encodeURIComponent(
         packagejson.name
