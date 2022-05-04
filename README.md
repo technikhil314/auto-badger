@@ -107,7 +107,7 @@ Add following markdown comment where you want the badges to appear
 then run following in your project root directory
 
 ```
-npx auto-badger
+npx git-auto-badger
 ```
 
 And whoo hoo you are done. All the necessary badges are added to your markdown.
