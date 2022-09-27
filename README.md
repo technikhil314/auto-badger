@@ -19,6 +19,7 @@ A npm cli tool that reads your packagejson/project metadata and git config and c
 
 [![stargazers](https://img.shields.io/github/stars/technikhil314/auto-badger?style=social)](https://github.com/technikhil314/auto-badger/stargazers)
 [![number of forks](https://img.shields.io/github/forks/technikhil314/auto-badger?style=social)](https://github.com/technikhil314/auto-badger/fork)
+[![kandi X-Ray](https://kandi.openweaver.com/badges/xray.svg)](https://kandi.openweaver.com/javascript/technikhil314/auto-badger)
 [![Follow technikhil314 on twitter](https://img.shields.io/twitter/follow/technikhil314?label=Follow)](https://www.twitter.com/technikhil314)
 
 ###### :clap: & :heart: to [auto badger](https://github.com/technikhil314/auto-badger) for making badging simple
